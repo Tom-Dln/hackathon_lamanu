@@ -5,5 +5,153 @@
 /* Vérification de la bonne connexion */
 body {
     min-height: 100vh;
-    background: #1C8ADB;
+    background: #1c8adb;
+}
+
+.orientation-advice-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(39, 47, 120);
+    background: linear-gradient(
+        157deg,
+        rgba(39, 47, 120, 1) 0%,
+        rgba(112, 36, 109, 1) 100%
+    );
+    z-index: 999;
+    display: none;
+}
+
+.orientation-advice-text {
+    display: none;
+}
+
+@media (orientation: portrait) {
+    .orientation-advice-bg {
+        display: block;
+    }
+    .orientation-advice-text {
+        display: block;
+    }
+}
+
+/* ---------------------------------------------------------------------------- */
+
+/* Ajout Allan */
+
+@font-face {
+    font-family: "synthekr";
+    src: url(../libs/synthekR_ldr.ttf);
+}
+@font-face {
+    font-family: "TheLed";
+    src: url(../libs/The_Led_Display_St.ttf);
+}
+body {
+    display: flex;
+    justify-content: center;
+    font-family: synthekr;
+    font-size: 5vh;
+    align-items: center;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    cursor: url(../img/cursor_lumiere_smol.png), pointer;
+}
+.IG_target {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    /* animation: animation_cible 2s ease-in-out; */
+}
+.IG_target img {
+    /* width: 0px; */
+    /* height: 0px; */
+    height: 100px;
+    width: 100px;
+    /* animation: animation_cible 2s ease-in-out; */
+}
+
+.IG_Background {
+    width: 100vw;
+    height: 100vh;
+    z-index: -1000;
+    top: 0;
+    left: 0;
+    position: absolute;
+    animation: bg-pan-right 10s;
+    background-image: url(../img/background_in_game.jpg);
+    background-size: cover;
+    background-position-y: bottom;
+    background-color: black;
+}
+
+.IG_stats {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    /* background-color: yellow; */
+}
+.IG_score_value {
+    letter-spacing: 10px;
+}
+.IG_message {
+    display: none;
+}
+.IG_start_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: rgba(0, 0, 0, 0.5);
+    background-color: rgba(42, 169, 219, 0.644);
+    width: 15vw;
+    height: 30px;
+    transition: all 200ms;
+}
+.IG_start_button:hover {
+    background-color: rgba(42, 169, 219, 0.747);
+    box-shadow: rgba(42, 169, 219) 0 0 15px;
+}
+
+@keyframes animation_cible {
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+    50% {
+        width: 100px;
+        height: 100px;
+    }
+    100% {
+        width: 0px;
+        height: 0px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .IG_message {
+        display: block;
+    }
+}
+
+.IG_bonustarget {
+    animation: slide_to_the_left 1s ease-in-out;
+}
+@keyframes slide_to_the_left {
+    from {
+        left: 0vw;
+        top: 20vh;
+    }
+    to {
+        left: 100vw;
+        top: 20vh;
+    }
 }
