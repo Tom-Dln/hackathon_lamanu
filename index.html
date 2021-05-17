@@ -1,151 +1,125 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Ceci est un exemple de méta description. Cela apparaîtra souvent dans les résultats de recherche."
-    />
+    <meta name="description"
+        content="Ceci est un exemple de méta description. Cela apparaîtra souvent dans les résultats de recherche." />
     <title>Hackathon LaManu</title>
     <!-- CSS Bootstrap -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
     <!-- CSS Custom -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/menuCSS.css" />
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/img/favicon-dev.ico" />
-  </head>
+</head>
 
-  <body class="py-5">
+<body class="py-5">
     <audio id="main_theme" autoplay loop>
-      <source src="assets\sounds\menu.mp3" type="audio/mp3" />
+        <source src="assets\sounds\menu.mp3" type="audio/mp3" />
     </audio>
     <audio id="in_game_theme" autoplay loop>
-      <source src="assets\sounds/game.mp3" type="audio/mp3" />
+        <source src="assets\sounds/game.mp3" type="audio/mp3" />
     </audio>
     <div class="container-fluid" id="screen_menu">
-      <div class="main_bg"></div>
+        <div class="main_bg"></div>
 
-      <div class="row main_flex mb-5">
-        <img
-          src="assets\img\MIDNIGHT_TARGET.png"
-          class="main_logo main_flex"
-          alt="main_logo"
-        />
-      </div>
-      <div class="row main_flex mt-5">
-        <div class="col-5">
-          <div class="row">
-            <!-- <label for="player" class="main_label">Player :</label> -->
-            <!-- <input type="text" name="player" id="player" class="form-control main_synthekr" placeholder="Pseudonyme"></input> -->
-          </div>
-          <div class="row">
-            <div class="col-6 main_flex">
-              <button
-                id="menu_start_button"
-                type="button"
-                class="btn main_synthekr mt-2"
-              >
-                <a href="" class="main_a">Start</a>
-              </button>
-            </div>
-            <div class="col-6 main_flex">
-              <button
-                type="button"
-                class="btn main_synthekr mt-2"
-                data-toggle="modal"
-                data-target="#regles"
-              >
-                Règles
-              </button>
-              <div
-                class="modal fade"
-                id="regles"
-                tabindex="-1"
-                role="dialog"
-                aria-labelledby="Règles du jeu"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header bg-dark">
-                      <h5 class="modal-title main_label" id="regle">
-                        Règles du jeu
-                      </h5>
-                      <button
-                        type="button"
-                        class="close"
-                        data-dismiss="modal"
-                        aria-label="Close"
-                      >
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body main_modal bg-dark">
-                      <h3>Bienvenue dans Midnight Target!</h3>
-                      <p>
-                        La règle est simple, détruisez le plus de cibles
-                        possible dans le temps imparti. Good Luck Have Fun !
-                      </p>
-                    </div>
-                    <div class="modal-footer bg-dark">
-                      <button
-                        type="button"
-                        class="btn btn-dark"
-                        data-dismiss="modal"
-                      >
-                        Close
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="row main_flex mb-5">
+            <img src="assets\img\MIDNIGHT_TARGET.png" class="main_logo main_flex" alt="main_logo" />
         </div>
-      </div>
+        <div class="row main_flex mt-5">
+            <div class="col-5">
+                <div class="row">
+                    <!-- <label for="player" class="main_label">Player :</label> -->
+                    <!-- <input type="text" name="player" id="player" class="form-control main_synthekr" placeholder="Pseudonyme"></input> -->
+                </div>
+                <div class="row">
+                    <div class="col-6 main_flex">
+                        <button id="menu_start_button" type="button" class="btn main_synthekr mt-2">
+                            <a href="" class="main_a">Start</a>
+                        </button>
+                    </div>
+                    <div class="col-6 main_flex">
+                        <button type="button" class="btn main_synthekr mt-2" data-toggle="modal" data-target="#regles">
+                            Règles
+                        </button>
+                        <div class="modal fade" id="regles" tabindex="-1" role="dialog" aria-labelledby="Règles du jeu"
+                            aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header bg-dark">
+                                        <h5 class="modal-title main_label" id="regle">
+                                            Règles du jeu
+                                        </h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body main_modal bg-dark">
+                                        <h3>Bienvenue dans Midnight Target!</h3>
+                                        <p>
+                                            La règle est simple, détruisez le plus de cibles
+                                            possible dans le temps imparti. Good Luck Have Fun !
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer bg-dark">
+                                        <button type="button" class="btn btn-dark" data-dismiss="modal">
+                                            Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- =============== -->
     <div class="IG_screen">
-      <div class="IG_Background"></div>
-      <div id="IG_start_button" class="IG_start_button">START</div>
-      <div class="IG_stats">
-        <div class="IG_timer">90</div>
-        <div class="IG_message">Tirez !</div>
-        <div id="IG_score" class="IG_score">
-          <span class="IG_score_value">0</span>
+        <div class="IG_Background"></div>
+        <div id="IG_start_button" class="IG_start_button">START</div>
+        <div id="IG_menu_button" class="IG_menu_button mt-2">MENU</div>
+        <div class="IG_stats">
+            <div class="IG_timer">90</div>
+            <div class="IG_message">Tirez !</div>
+            <div id="IG_score" class="IG_score">
+                <span class="IG_score_value">0</span>
+            </div>
+            <div class="mt-5" id="game_over">
+                <img src="assets/img/game_over.png" class="img-fluid" alt="Logo Game Over">
+            </div>
         </div>
-      </div>
-      <div id="IG_target" class="IG_target">
-        <audio id="IG_hit" src="assets\sounds\ouch.mp3"></audio>
-        <img src="assets/img/cible_lumièreV2.png" alt="cible_jeu_de_tir" />
-      </div>
+        <div class="crossScreen" id="crossScreen">
+            <img src="assets/img/cible_lumièreV2.png" alt="cible_jeu_de_tir" />
+        </div>
+        <div class="crossScreenRight" id="crossScreenRight">
+            <img src="assets/img/cible_lumièreV2.png" alt="cible_jeu_de_tir" />
+        </div>
+        <div id="IG_target" class="IG_target">
+            <audio id="IG_hit" src="assets\sounds\ouch.mp3"></audio>
+            <img src="assets/img/cible_lumièreV2.png" alt="cible_jeu_de_tir" />
+        </div>
     </div>
 
     <div class="orientation-advice-bg">
-      <h2 class="text-center text-white orientation-advice-text">
-        Merci de passer en Format Paysage :)
-      </h2>
+        <h2 class="text-center text-white orientation-advice-text">
+            Merci de passer en Format Paysage :)
+        </h2>
     </div>
     <!-- JS Bootstrap -->
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
     <!-- JS Custom -->
     <script src="assets/js/script.js"></script>
-  </body>
+</body>
+
 </html>
