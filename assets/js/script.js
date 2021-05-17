@@ -30,6 +30,7 @@ $("#IG_start_button").click( function () {
     interval()
     timer()
     timerNum = 90
+    score = 0;
     $("#IG_start_button").hide();
     $("#IG_menu_button").hide();
     $("#in_game_theme")[0].play();
