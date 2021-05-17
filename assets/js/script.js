@@ -29,6 +29,7 @@ $("#IG_start_button").click( function () {
     timer()
     timerNum = 90
     $("#IG_start_button").hide();
+    $("#IG_menu_button").hide();
     $("#in_game_theme")[0].play();
 })
 
@@ -78,6 +79,7 @@ function timer() {
             $("#IG_target").hide()
             $("#game_over").show();
             $("#IG_start_button").show();
+            $("#IG_menu_button").show()
         }
     },1000)
 }
