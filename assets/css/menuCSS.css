@@ -1,0 +1,79 @@
+/* -----------------------------------------------
+    Fichier CSS
+----------------------------------------------- */
+
+/* Vérification de la bonne connexion */
+
+/*.row {
+    border: 1px solid #7451EB;
+    padding: 3px;}
+  [class^="col"] {
+    padding: 1rem;
+    border: 2px solid #3FA5DB;}*/
+@font-face {
+  font-family: "synthekr";
+  src: url(../fonts/synthekR_ldr.ttf);
+}
+@font-face {
+  font-family: "TheLed";
+  src: url(../fonts/The\ Led\ Display\ St.ttf);
+}
+.main_bg {
+  background-image: url(../img/bgaccueil.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  z-index: -1000;
+  position: absolute;
+}
+.main_label {
+  font-family: "synthekr";
+  font-size: 2em;
+  color: #55ddff;
+}
+.main_synthekr {
+  font-family: "synthekr";
+  font-size: 2em;
+  color: #55ddff;
+  background-color: rgba(0, 36, 127, 0.753) !important;
+  border: solid 1px #55ddff;
+  border-radius: 8px;
+  transition: color 0.8s;
+}
+.main_synthekr:hover {
+  color: white;
+}
+.main_modal {
+  font-family: "TheLed";
+  color: white;
+}
+.main_a {
+  color: #55ddff;
+  transition: color 0.8s;
+}
+.main_a:hover {
+  color: white;
+  text-decoration: none;
+}
+#screen_menu {
+  font-size: 14px;
+}
+input::placeholder {
+  color: #55ddff !important;
+}
+.main_logo {
+  height: 100px;
+}
+@media screen and (min-width: 1000px) {
+  .main_logo {
+    height: 200px;
+  }
+}
+.main_flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

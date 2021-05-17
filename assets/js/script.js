@@ -1,9 +1,16 @@
 /* -----------------------------------------------
     Fichier JS
 ----------------------------------------------- */
-
 // Vérification de la bonne connexion
 console.log("Connexion JS - Ok")
+// Passage entre pages
+$("#menu_start_button").click(function(e){
+    e.preventDefault();
+    $(".IG_screen").toggle( );
+    $("#screen_menu").toggle();
+})
+
+
 
 //animation target
 $("#IG_target").hide()
@@ -18,6 +25,7 @@ $("#IG_start_button").click( function () {
     timer()
     timerNum = 90
     $("#IG_start_button").hide();
+    $("#in_game_theme")[0].play();
 })
 
 function start (){
@@ -32,6 +40,8 @@ let score = 0
 
 $("#IG_target").click(function(){
     $("#IG_target").hide()
+    $('#IG_hit')[0].play()
+    console.log($('#IG_hit'));
     score++
     $(".IG_score_value").html(score)
     timePaste = 0
@@ -40,11 +50,8 @@ $("#IG_target").click(function(){
 let timePaste = 0
 let targetInterval
 function interval() {
-    console.log('interval')
     targetInterval = setInterval(function () {
-        console.log('timeout')
         timePaste++
-        console.log(timePaste)
         if (timePaste == 3) {
             start()
             timePaste = 0
