@@ -3,11 +3,13 @@
 ----------------------------------------------- */
 // Vérification de la bonne connexion
 console.log("Connexion JS - Ok")
+$('img').on('dragstart', function(event) { event.preventDefault(); });
 // Passage entre pages
 $("#menu_start_button").click(function(e){
     e.preventDefault();
     $(".IG_screen").toggle( );
     $("#screen_menu").toggle();
+    $("#game_over").hide();
 })
 $("#IG_menu_button").click(function(e){
     e.preventDefault();
@@ -31,6 +33,7 @@ $("#IG_start_button").click( function () {
     $("#IG_start_button").hide();
     $("#IG_menu_button").hide();
     $("#in_game_theme")[0].play();
+    $("#game_over").hide();
 })
 
 function start (){
